@@ -108,24 +108,25 @@ Creación del Dashboard
 Paso no. 1
 
 Generar un archivo yml con docker compose con el siguiente contenido 
+
 # compose.yml
 
-version: "3"
+#version: "3"
 
-services:
-  dashboard:
-    image: charypar/swarm-dashboard //imagen que utilizaremos para el dashboard
-    volumes:
-    - "/var/run/docker.sock:/var/run/docker.sock" // compartiremos los volumenes
-    ports:
-    - 8081:8080 //exponemos los puertos
-    environment:
-      PORT: 8080 //puerto en donde se creará la variable de entorno
-    deploy:
-      replicas: 1 //número de replicas que queremos del dashboard
-      placement:
-        constraints:
-          - node.role == manager //se utilizara un master para establecer el Dashboard
+#services:
+  #dashboard:
+    #image: charypar/swarm-dashboard //imagen que utilizaremos para el dashboard
+    #volumes:
+    #- "/var/run/docker.sock:/var/run/docker.sock" // compartiremos los volumenes
+    #ports:
+    #- 8081:8080 //exponemos los puertos
+    #environment:
+      #PORT: 8080 //puerto en donde se creará la variable de entorno
+    #deploy:
+      #replicas: 1 //número de replicas que queremos del dashboard
+      #placement:
+        #constraints:
+          #- node.role == manager //se utilizara un master para establecer el Dashboard
 
 
 Paso no. 2
