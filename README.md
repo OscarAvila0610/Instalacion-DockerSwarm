@@ -21,19 +21,33 @@ Paso 3
 Al momento de crear las maquinas virtuales se realiza un cambio en el archivo /etc/sysconfig/network-scripts/ifcfg-enp0s3 este puede realizarse con un nano para cambiar ONBOOT a yes, para tener conexión a internet.
 
 TYPE=Ethernet
+
 PROXY_METHOD=none
+
 BROWSER_ONLY=no
+
 BOOTPROTO=dhcp
+
 DEFROUTE=yes
+
 IPV4_FAILURE_FATAL=no
+
 IPV6INIT=yes
+
 IPV6_AUTOCONF=yes
+
 IPV6_DEFROUTE=yes
+
 IPV6_FAILURE_FATAL=no
+
 IPV6_ADDR_GEN_MODE=stable-privacy
+
 NAME=enp0s3
+
 UUID=3c21a88b-fbf3-419e-a4d5-495d0ec72c7f
+
 DEVICE=enp0s3
+
 ONBOOT=yes
 
 Paso no. 4
