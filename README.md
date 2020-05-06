@@ -2,11 +2,13 @@
 Implementar un cluster de alta disponibilidad con Docker Swarm
 Creación del Clúster 
 Paso 1
+
 Creamos cinco maquinar virtuales con las siguientes especificaciones:
  
 Nos servirán para los Masters 01, 02, 03 y los Workers 01 y 02.
 
 Paso 2.
+
 Establecemos el hostname para cada máquina virtual
 -	hostnamectl set-hostname master01
 -	hostnamectl set-hostname master02
@@ -15,7 +17,9 @@ Establecemos el hostname para cada máquina virtual
 -	hostnamectl set-hostname master02
 
 Paso 3
+
 Al momento de crear las maquinas virtuales se realiza un cambio en el archivo /etc/sysconfig/network-scripts/ifcfg-enp0s3 este puede realizarse con un nano para cambiar ONBOOT a yes, para tener conexión a internet.
+
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no
